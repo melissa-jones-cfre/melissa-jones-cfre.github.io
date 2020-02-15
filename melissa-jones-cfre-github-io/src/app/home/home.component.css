@@ -5,3 +5,32 @@
 #bcbs {
   margin-bottom: -20px;
 }
+
+@media screen and (max-width: 430px) {
+  #formatColumns2 {
+    margin-left: 15px !important;
+    margin-right: 10px !important;
+  }
+  #sluh {
+    margin-bottom: 0px;
+  }
+  #bcbs {
+    margin-bottom: 0px;
+  }
+  #centerIt {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 380px) {
+  #formatColumns {
+    margin-left: 15px !important;
+    margin-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  #formatColumns3 {
+    margin-left: 15px !important;
+    margin-right: 10px !important;
+  }
+}
