@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'melissa-jones-cfre-github-io';
+  @HostListener('window:scroll', []) onWindowScroll() {
+    this.scrollFunction();
+  }
+
+  scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById('myBtn').style.display = 'block';
+    } else {
+      document.getElementById('myBtn').style.display = 'none';
+    }
+  }
+
+  topFunction() {
+    document.body.scrollTo({ top: 0, behavior: 'smooth' }); // For Safari
+    document.documentElement.scrollTo({ top: 0, behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
+  }
 }
